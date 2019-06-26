@@ -37,7 +37,7 @@ class CalculationTests {
     @Test
     void ExecutionTimer_testMethods_Expected() {
         System.out.println();
-        ExecutionTimer.StartTimer();
+        ExecutionTimer.startTimer();
         String str = methodCall("", "");
         System.out.println("Method called"+str);
         ExecutionTimer.printElapedTime(TimeUnit.SECONDS);

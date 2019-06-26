@@ -20,7 +20,7 @@ public class ExecutionTimer {
     /**
      * Run immediately before execution of code to begin timing.
      */
-    public static void StartTimer() {
+    public static void startTimer() {
         LOGGER.trace("Timer Started!");
         ExecutionTimer.time = System.nanoTime();
     }
@@ -41,7 +41,7 @@ public class ExecutionTimer {
      * @return The result returned from executing the method.
      */
     public static <R> R timing(Supplier<R> operation, TimeUnit unit) {
-        StartTimer();
+        startTimer();
         R result  = operation.get();
         print(unit, System.nanoTime() - ExecutionTimer.time);
         return result;
